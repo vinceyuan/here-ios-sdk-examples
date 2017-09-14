@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // create geo coordinate
     NMAGeoCoordinates* geoCoordCenter =
-        [[NMAGeoCoordinates alloc] initWithLatitude:49.260327 longitude:-123.115025];
+        [[NMAGeoCoordinates alloc] initWithLatitude:1.281269 longitude:103.848359];
     // set map view with geo center
     [self.mapView setGeoCenter:geoCoordCenter withAnimation:NMAMapAnimationNone];
     // set zoom level
@@ -69,12 +69,12 @@
     // Create an NSMutableArray to add two stops
     NSMutableArray* stops = [[NSMutableArray alloc] initWithCapacity:4];
 
-    // START: 4350 Still Creek Dr
+    // START: Cecil court
     NMAGeoCoordinates* hereBurnaby =
-        [[NMAGeoCoordinates alloc] initWithLatitude:49.259149 longitude:-123.008555];
-    // END: Langley BC
+        [[NMAGeoCoordinates alloc] initWithLatitude:1.281269 longitude:103.848359];
+    // END: 111 Middle Rd, Singapore 188969
     NMAGeoCoordinates* langley =
-        [[NMAGeoCoordinates alloc] initWithLatitude:49.0736 longitude:-122.559549];
+        [[NMAGeoCoordinates alloc] initWithLatitude:1.298776 longitude:103.853564];
     [stops addObject:hereBurnaby];
     [stops addObject:langley];
 
@@ -141,6 +141,7 @@
     // suitable for walking. Simulation and tracking modes can also be launched at this moment
     // by calling either simulate() or startTracking()
     [self.navigationManager startTurnByTurnNavigationWithRoute:self.route];
+    //[self.navigationManager startTrackingWithTransportMode:NMATransportModeCar];
 
     // Set the map tracking properties
     [NMANavigationManager sharedNavigationManager].mapTrackingEnabled = YES;
